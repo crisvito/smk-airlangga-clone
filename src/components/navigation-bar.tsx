@@ -2,9 +2,9 @@ import { configNavBarLinks } from "../configs";
 import { LinkButton } from "../components";
 export function NavigationBar() {
   return (
-    <nav className="px-10 py-5 text-xl flex justify-between">
-      <div className="nav-item-first flex gap-10 items-center">
-        <h1 className="text-white font-bold text-3xl uppercase">frigg</h1>
+    <nav className="flex justify-between px-10 py-5 text-xl">
+      <div className="nav-item-first flex items-center gap-10">
+        <h1 className="text-3xl font-bold uppercase text-white">frigg</h1>
 
         <ul className="nav-links">
           {configNavBarLinks.map((navBarLinks) => {
@@ -13,7 +13,7 @@ export function NavigationBar() {
         </ul>
       </div>
 
-      <div className="nav-item-second flex gap-10 items-center">
+      <div className="nav-item-second flex items-center gap-10">
         <LinkButton to="/about">Download</LinkButton>
         <ul className="nav-links">
           <li>Login</li>

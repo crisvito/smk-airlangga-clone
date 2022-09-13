@@ -1,15 +1,13 @@
-import { NavigationBar } from "./components";
+import { NavigationBar, Footer } from "./components";
 
 export default function App() {
   return (
-    <div className="dark:text-white">
+    <div className="flex min-h-screen flex-col dark:text-white">
       <NavigationBar />
-      <main>
+      <main className="flex-[1]">
         <p>content</p>
       </main>
-      <footer>
-        <p>footer</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
