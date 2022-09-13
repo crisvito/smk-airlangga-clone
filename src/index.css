@@ -12,7 +12,9 @@
     @apply flex gap-10 uppercase tracking-wider;
   }
   .button {
-    @apply rounded-sm bg-teal-500 px-5 py-1 text-white;
+    @apply rounded-sm bg-teal-500 px-5 py-1 text-base text-white;
+    @apply hover:bg-teal-600 focus:ring focus:ring-teal-900 active:bg-teal-700;
+    @apply font-body-bold uppercase;
   }
 }
 
