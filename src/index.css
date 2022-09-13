@@ -12,6 +12,13 @@
     @apply flex gap-10 uppercase tracking-wider;
   }
   .button {
-    @apply bg-teal-500 text-white px-5 py-1 rounded-sm;
+    @apply rounded-sm bg-teal-500 px-5 py-1 text-white;
+  }
+}
+
+@layer utilities {
+  .bg-home-hero {
+    @apply bg-cover bg-center;
+    background-image: url("https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
   }
 }
