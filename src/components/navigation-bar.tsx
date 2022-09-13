@@ -1,5 +1,7 @@
 import { configNavBarLinks } from "../configs";
 import { LinkButton } from "../components";
+
+import { Download } from "phosphor-react";
 export function NavigationBar() {
   return (
     <nav className="flex justify-between px-10 py-5 text-xl">
@@ -14,7 +16,10 @@ export function NavigationBar() {
       </div>
 
       <div className="nav-item-second flex items-center gap-10">
-        <LinkButton to="/about">Download</LinkButton>
+        <LinkButton to="/about" className="flex items-center gap-2">
+          <Download size={20} weight="bold" />
+          <span>Download</span>
+        </LinkButton>
         <ul className="nav-links">
           <li>Login</li>
           <li>Join</li>
