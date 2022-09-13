@@ -11,4 +11,7 @@
   .nav-links {
     @apply flex gap-10 uppercase tracking-wider;
   }
+  .button {
+    @apply bg-teal-500 text-white px-5 py-1 rounded-sm;
+  }
 }
