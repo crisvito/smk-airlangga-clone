@@ -1,3 +1,15 @@
+import { NavigationBar } from "./components";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="dark:text-white">
+      <NavigationBar />
+      <main>
+        <p>content</p>
+      </main>
+      <footer>
+        <p>footer</p>
+      </footer>
+    </div>
+  );
 }

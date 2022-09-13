@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900;
+  }
+}
+@layer components {
+  .nav-links {
+    @apply flex gap-10 uppercase tracking-wider;
+  }
+}
