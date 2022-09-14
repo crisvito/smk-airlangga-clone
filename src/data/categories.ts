@@ -21,7 +21,7 @@ export const dataCategories: Category[] =[
     games: [
       {
         name: 'FreestyleFootballR',
-        price: 300000,
+        price: 1300000,
         currency: 'IDR',
         tags: ['PvP', 'Multiplayer', 'MOBA'],
         platforms: ['windows'],
@@ -29,7 +29,7 @@ export const dataCategories: Category[] =[
       },
       {
         name: 'Freedom Planet 2',
-        price: 100000,
+        price: 120000,
         currency: 'IDR',
         tags: ['Action', 'Multiplayer', 'Advanture'],
         platforms: ['windows'],
@@ -44,7 +44,7 @@ export const dataCategories: Category[] =[
     games: [
       {
         name: 'CyberPunk 2077',
-        price: 1300000,
+        price: 1300200,
         currency: 'IDR',
         tags: ['Open World', 'RPG', 'Nudity'],
         platforms: ['windows'],
@@ -52,7 +52,7 @@ export const dataCategories: Category[] =[
       },
       {
         name: 'Isonzo',
-        price: 500000,
+        price: 500080,
         currency: 'IDR',
         tags: ['Tactical', '3D', 'Historical'],
         platforms: ['windows' , 'mac'],
@@ -67,7 +67,7 @@ export const dataCategories: Category[] =[
     games: [
       {
         name: 'FreestyleFootballR',
-        price: 300000,
+        price: 320000,
         currency: 'IDR',
         tags: ['PvP', 'Multiplayer', 'MOBA'],
         platforms: ['windows'],
@@ -75,7 +75,7 @@ export const dataCategories: Category[] =[
       },
       {
         name: 'Freedom Planet 2',
-        price: 100000,
+        price: 160000,
         currency: 'IDR',
         tags: ['Action', 'Multiplayer', 'Advanture'],
         platforms: ['windows'],
@@ -90,7 +90,7 @@ export const dataCategories: Category[] =[
     games: [
       {
         name: 'FreestyleFootballR',
-        price: 300000,
+        price: 31000,
         currency: 'IDR',
         tags: ['PvP', 'Multiplayer', 'MOBA'],
         platforms: ['windows'],
@@ -98,7 +98,7 @@ export const dataCategories: Category[] =[
       },
       {
         name: 'Freedom Planet 2',
-        price: 1000000000000,
+        price: 102000,
         currency: 'IDR',
         tags: ['Action', 'Multiplayer', 'Advanture'],
         platforms: ['windows'],

@@ -2,6 +2,7 @@ import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { clsx } from "clsx";
 import { dataCategories } from "../data";
 import { FormatGamePrice } from "../utils";
+import { Icon } from "../components";
 
 export function CategoryTabs() {
   return (
@@ -43,11 +44,11 @@ export function CategoryTabs() {
                     />
 
                     <div className="game-details flex w-full items-center justify-between py-3 px-5">
-                      <div>
+                      <div className="space-y-1">
                         <h4 className="font-body-bold">{game.name}</h4>
-                        <div>
+                        <div className="flex gap-1">
                           {game.platforms.map((platform) => {
-                            return <span>{platform}</span>;
+                            return <Icon key={platform} name={platform} />;
                           })}
                         </div>
                         <p>{game.tags.join(", ")}</p>
