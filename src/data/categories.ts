@@ -1,10 +1,10 @@
-type Category = {
+export type Category = {
   value: string;
   name: string;
   content: any;
   games: Game[];
 }
-type Game = {
+export type Game = {
   name: string;
   price: number;
   currency: string;
@@ -98,7 +98,7 @@ export const dataCategories: Category[] =[
       },
       {
         name: 'Freedom Planet 2',
-        price: 100000,
+        price: 1000000000000,
         currency: 'IDR',
         tags: ['Action', 'Multiplayer', 'Advanture'],
         platforms: ['windows'],
