@@ -1,12 +1,12 @@
 {
-  "homepage": "https://smk-airlangga-clone.github.io",
+  "homepage": "https://pitokai.github.io/smk-airlangga-clone",
   "name": "frigg",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
