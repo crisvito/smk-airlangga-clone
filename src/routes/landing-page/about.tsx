@@ -1,4 +1,4 @@
-import { AboutHero } from "../contents";
+import { AboutHero } from "../../contents";
 
 export function RouteAbout() {
   return (

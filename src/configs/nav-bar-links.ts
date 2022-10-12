@@ -1,6 +1,6 @@
 export const configNavBarLinks =[
-  {to:'/', text: 'Store'},
-  {to:'/about', text: 'About'},
-  {to:'/community', text: 'Community'},
-  {to:'/Support', text: 'Support'},
+  {to:'#home', text: 'Home'},
+  {to:'#event', text: 'Event'},
+  {to:'#about', text: 'About'},
+  {to:'#support', text: 'Support'},
 ]

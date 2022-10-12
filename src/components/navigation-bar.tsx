@@ -1,30 +1,55 @@
+import { List, X } from "phosphor-react";
+import { useState } from "react";
 import { configNavBarLinks } from "../configs";
-import { LinkButton } from "../components";
 
-import { Download } from "phosphor-react";
-export function NavigationBar() {
+export function NavigationBar(this: any) {
+  const [open, setOpen] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBg: any = () => {
+    window.scrollY >= 100 ? setNavbar(true) : setNavbar(false);
+  };
+  window.addEventListener("scroll", changeBg);
   return (
-    <nav className="flex justify-between px-10 py-5 text-xl">
-      <div className="nav-item-first flex items-center gap-10">
-        <h1 className="text-3xl font-bold uppercase text-white">frigg</h1>
+    <div
+      className={`fixed w-full ${navbar ? "bg-slate-900" : ""} duration-500`}
+    >
+      <nav
+        className={`px-10 py-5 text-xl lg:flex lg:items-center lg:justify-between`}
+      >
+        <a href="/">
+          <h1 className="text-3xl font-bold uppercase text-white">
+            Smk Airlangga Balikpapan
+            <span className="block text-base font-normal">
+              Entrepreneur Spirit School
+            </span>
+          </h1>
+        </a>
 
-        <ul className="nav-links">
+        <div className="absolute top-8 right-5 cursor-pointer lg:hidden">
+          {open ? (
+            <X size={32} weight="bold" onClick={() => setOpen(false)} />
+          ) : (
+            <List size={38} weight="bold" onClick={() => setOpen(true)} />
+          )}
+        </div>
+
+        <ul
+          className={`transtition-all absolute left-0 z-[1] w-full pb-8 pl-12 duration-500 ease-in lg:static lg:left-0 lg:z-auto lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
+            open ? "left-0" : "left-[1000px]"
+          }`}
+        >
           {configNavBarLinks.map((navBarLinks) => {
-            return <li key={navBarLinks.text}>{navBarLinks.text}</li>;
+            return (
+              <a href={navBarLinks.to} key={navBarLinks.text}>
+                <li className="hover:fs-bold mx-4 py-4 hover:text-slate-400 hover:duration-150 lg:py-0">
+                  {navBarLinks.text}
+                </li>
+              </a>
+            );
           })}
         </ul>
-      </div>
-
-      <div className="nav-item-second flex items-center gap-10">
-        <LinkButton to="/about" className="flex items-center gap-2">
-          <Download size={20} weight="bold" />
-          <span>Download</span>
-        </LinkButton>
-        <ul className="nav-links">
-          <li>Login</li>
-          <li>Join</li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }

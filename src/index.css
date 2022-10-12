@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  *,
+  html,
+  body {
+    @apply scroll-smooth;
+  }
   body {
     @apply bg-slate-900;
   }
 }
 @layer components {
-  .nav-links {
-    @apply flex gap-10 uppercase tracking-wider;
-  }
   .button {
     @apply rounded-sm bg-teal-500 px-5 py-2 text-base text-white;
     @apply hover:bg-teal-600 focus:ring focus:ring-teal-900 active:bg-teal-700;
@@ -33,6 +35,6 @@
   }
   .bg-home-hero {
     @apply bg-cover bg-center;
-    background-image: url("https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-image: url("public/assets/homehero.jpg");
   }
 }
