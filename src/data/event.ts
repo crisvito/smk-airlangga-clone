@@ -27,7 +27,7 @@ export const dataevent: Event[] =[
     slug: "perjusa", 
     excerpt: "Perjusa adalah perkemahan jumat-sabtu . tujuan dari perjusa adalah untuk meningkatkan kemandirian...",
     content: "Perjusa adalah perkemahan jumat-sabtu . tujuan dari perjusa adalah untuk meningkatkan kemandirian para peserta kemah di alam luar (outdoor) . Banyak sekali perubahan yang dialami peserta kemah , yang dirasakan nya adalah bisa mengenal alam lebih jauh,bisa mandiri dalam kehidupan dan bisa menjadi percaya diri untuk berbicara kepada temannya walaupun belum mengenal satu sama lain antar peserta dalam jangka waktu sehari .",
-    heroImgUrl:"public/assets/perjusa",
+    heroImgUrl: "public/assets/perjusa",
     detail: detailperjusa 
   },
   {
@@ -49,3 +49,9 @@ export const dataevent: Event[] =[
     detail: detailperjusa 
   },
 ]
+
+export function getEvent(slug: string){
+  return dataevent.find(
+    (event) => event.slug == slug
+  )
+}

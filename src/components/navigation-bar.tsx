@@ -1,18 +1,21 @@
 import { List, X } from "phosphor-react";
 import { useState } from "react";
 import { configNavBarLinks } from "../configs";
+import { Link } from "react-router-dom";
 
 export function NavigationBar(this: any) {
   const [open, setOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
-
+  const base = import.meta.env.BASE_URL;
   const changeBg: any = () => {
     window.scrollY >= 100 ? setNavbar(true) : setNavbar(false);
   };
   window.addEventListener("scroll", changeBg);
   return (
     <div
-      className={`fixed w-full ${navbar ? "bg-slate-900" : ""} duration-500`}
+      className={`fixed block w-full ${
+        navbar ? "bg-slate-900" : ""
+      } z-10 duration-500`}
     >
       <nav
         className={`px-10 py-5 text-xl lg:flex lg:items-center lg:justify-between`}
@@ -41,7 +44,7 @@ export function NavigationBar(this: any) {
         >
           {configNavBarLinks.map((navBarLinks) => {
             return (
-              <a href={navBarLinks.to} key={navBarLinks.text}>
+              <a href={`${base}${navBarLinks.to}`} key={navBarLinks.text}>
                 <li className="hover:fs-bold mx-4 py-4 hover:text-slate-400 hover:duration-150 lg:py-0">
                   {navBarLinks.text}
                 </li>

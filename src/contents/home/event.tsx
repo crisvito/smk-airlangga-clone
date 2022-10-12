@@ -1,24 +1,26 @@
 import { dataevent } from "../../data";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export function HomeEvent() {
   const base = import.meta.env.BASE_URL;
+
   return (
-    <div id="event" className="flex flex-wrap justify-center">
+    <div id="events" className="flex flex-wrap justify-center">
       {dataevent.map((devent) => {
         return (
           <Link
             to={`${base}event/${devent.slug}`}
-            className="relative m-10 block w-1/4 overflow-hidden rounded-lg shadow-md xl:h-52"
+            className="group relative m-10 block w-1/4 overflow-hidden rounded-lg shadow-md duration-300 xl:h-52"
           >
             <div
               id="home"
-              className="flex h-full w-full items-center justify-center bg-black bg-opacity-0 bg-opacity-50 p-3"
+              className="flex h-full w-full items-center justify-center bg-black bg-opacity-50 p-3 duration-500 hover:bg-opacity-0 hover:uppercase"
             >
               <img
-                src={devent.heroImgUrl}
+                src={devent.heroImgUrl + ".jpg"}
                 alt={devent.name}
-                className="absolute left-0 bottom-0 z-[-1]"
+                className="absolute bottom-0 z-[-1] h-full"
               />
               <div className="absolut z-10">
                 <h5 className="mb-2 text-lg font-bold uppercase tracking-tight text-gray-900 dark:text-white">
