@@ -35,6 +35,6 @@
   }
   .bg-home-hero {
     @apply bg-cover bg-center;
-    background-image: url("public/assets/homehero.jpg");
+    background-image: url("/assets/homehero.jpg");
   }
 }
