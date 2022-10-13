@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 export function HomeEvent() {
-  const base = import.meta.env.BASE_URL;
-
   return (
     <div id="events" className="flex flex-wrap justify-center">
       {dataevent.map((devent) => {
         return (
           <Link
-            to={`${base}event/${devent.slug}`}
+            to={`event/${devent.slug}`}
             className="group relative m-10 block w-1/4 overflow-hidden rounded-lg shadow-md duration-300 xl:h-52"
           >
             <div

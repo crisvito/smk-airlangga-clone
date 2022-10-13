@@ -2,14 +2,13 @@ import { CaretDown } from "phosphor-react";
 import { useParams } from "react-router-dom";
 import { getEvent } from "../../data";
 export function EventHero() {
-  const base = import.meta.env.BASE_URL;
   const params = useParams();
   const event = getEvent(params.slug as string);
 
   return (
     <div className="relative flex h-screen items-center justify-center">
       <img
-        src={base + event?.heroImgUrl + ".jpg"}
+        src={event?.heroImgUrl + ".jpg"}
         alt={event?.name}
         className="absolute z-[-10] h-screen w-screen"
       />

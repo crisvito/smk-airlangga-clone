@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { getEvent } from "../../data";
 
 export function EventDetail() {
-  const base = import.meta.env.BASE_URL;
   const params = useParams();
   const event = getEvent(params.slug as string);
 
