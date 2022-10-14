@@ -6,7 +6,7 @@ export function EventHero() {
   const event = getEvent(params.slug as string);
 
   return (
-    <div className="relative flex h-screen items-center justify-center">
+    <div className="relative flex h-screen w-screen items-center justify-center">
       <img
         src={event?.heroImgUrl + ".jpg"}
         alt={event?.name}

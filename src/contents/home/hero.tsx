@@ -4,7 +4,7 @@ export function HomeHero() {
   return (
     <div
       id="home"
-      className="bg-home-hero flex h-screen w-screen items-center justify-center bg-black bg-opacity-0 bg-opacity-50"
+      className="bg-home-hero flex h-screen w-screen items-center justify-center  bg-black bg-opacity-0 bg-opacity-50"
     >
       <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-0 bg-opacity-50">
         <div className="text-center">

@@ -6,7 +6,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="font-body flex min-h-screen flex-col text-white dark:text-white">
+      <div className="font-body flex min-h-screen flex-col overflow-x-hidden text-white dark:text-white">
         <NavigationBar />
         <Routes>
           <Route path="/" element={<RouteHome />} />
