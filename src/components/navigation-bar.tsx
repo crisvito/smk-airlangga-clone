@@ -18,7 +18,7 @@ export function NavigationBar(this: any) {
       } z-10 duration-500`}
     >
       <nav
-        className={`px-10 py-5 text-xl lg:flex lg:items-center lg:justify-between`}
+        className={`px-5 py-5 text-xl lg:flex lg:items-center lg:justify-between`}
       >
         <a href="/">
           <h1 className="text-xl font-bold uppercase text-white lg:text-3xl">
@@ -29,7 +29,7 @@ export function NavigationBar(this: any) {
           </h1>
         </a>
 
-        <div className="absolute top-8 right-5 cursor-pointer lg:hidden">
+        <div className="absolute top-8 right-3 cursor-pointer lg:hidden">
           {open ? (
             <X size={32} weight="bold" onClick={() => setOpen(false)} />
           ) : (
