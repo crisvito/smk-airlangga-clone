@@ -14,7 +14,7 @@
 }
 @layer components {
   .about-content {
-    @apply flex h-auto w-full flex-wrap p-5 text-center lg:w-1/4;
+    @apply flex h-auto w-full flex-wrap px-5 text-center lg:w-1/4;
   }
   .about-content h3 {
     @apply block py-2 font-black uppercase;

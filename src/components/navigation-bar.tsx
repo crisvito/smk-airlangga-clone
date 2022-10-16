@@ -77,7 +77,10 @@ export function NavigationBar(this: any) {
               </LinkScroll>
             );
           })}
-          <li className="mx-4 pt-4 lg:mx-0 lg:pt-0">
+          <li
+            className="mx-4 pt-4 lg:mx-0 lg:pt-0"
+            onClick={() => setOpen(false)}
+          >
             {theme ? (
               <Sun size={34} weight="fill" onClick={() => setTheme(false)} />
             ) : (

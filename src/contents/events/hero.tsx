@@ -12,7 +12,7 @@ export function EventHero() {
       <img
         src={event?.heroImgUrl + ".jpg"}
         alt={event?.name}
-        className="absolute z-[-10] h-screen w-screen"
+        className="absolute z-[-10] h-3/5 w-screen bg-local"
       />
 
       <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-black bg-opacity-0 bg-opacity-50">
@@ -20,10 +20,10 @@ export function EventHero() {
           <ArrowLeft
             size={72}
             weight="bold"
-            className="h-min duration-300 hover:-translate-x-6 hover:scale-x-150 hover:scale-y-125"
+            className="h-min duration-300 hover:-translate-x-5"
           />
         </Link>
-        <h1 className="font-brand-bold text-xl uppercase leading-tight tracking-widest lg:text-7xl">
+        <h1 className="font-brand-bold text-3xl uppercase leading-tight tracking-widest lg:text-7xl">
           {event?.name}
         </h1>
       </div>
