@@ -1,10 +1,15 @@
+import { Footer, NavigationBar } from "../../components";
 import { HomeHero, HomeEvent } from "../../contents";
+import { RouteAbout } from "./about";
 
 export function RouteHome() {
   return (
-    <main className="flex-[1]">
+    <div className="flex-[1]">
+      <NavigationBar />
       <HomeHero />
       <HomeEvent />
-    </main>
+      <RouteAbout />
+      <Footer />
+    </div>
   );
 }

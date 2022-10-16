@@ -1,7 +1,7 @@
 import { List, X } from "phosphor-react";
 import { useState } from "react";
 import { configNavBarLinks } from "../configs";
-import { Link } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 
 export function NavigationBar(this: any) {
   const [open, setOpen] = useState(false);
@@ -17,9 +17,7 @@ export function NavigationBar(this: any) {
         navbar ? "bg-slate-900" : ""
       } z-10 duration-500`}
     >
-      <nav
-        className={`px-5 py-5 text-xl lg:flex lg:items-center lg:justify-between`}
-      >
+      <nav className="px-5 py-5 text-xl lg:flex lg:items-center lg:justify-between">
         <a href="/">
           <h1 className="text-xl font-bold uppercase text-white lg:text-3xl">
             Smk Airlangga Balikpapan
@@ -38,17 +36,22 @@ export function NavigationBar(this: any) {
         </div>
 
         <ul
-          className={`transtition-all absolute left-0 z-[1] w-full pb-8 pl-12 duration-500 ease-in lg:static lg:left-0 lg:z-auto lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
+          className={`transtition-all absolute left-0 z-[1] mt-4 w-full rounded-3xl pb-8 pl-12 duration-500 ease-in lg:static lg:left-0 lg:z-auto lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
             open ? "left-0 bg-slate-900" : "left-[1000px]"
           }`}
         >
           {configNavBarLinks.map((navBarLinks) => {
             return (
-              <Link to={`${navBarLinks.to}`} key={navBarLinks.text}>
+              <LinkScroll
+                to={navBarLinks.to}
+                key={navBarLinks.text}
+                onClick={() => setOpen(false)}
+                className="cursor-pointer"
+              >
                 <li className="hover:fs-bold mx-4 py-4 hover:text-slate-400 hover:duration-150 lg:py-0">
                   {navBarLinks.text}
                 </li>
-              </Link>
+              </LinkScroll>
             );
           })}
         </ul>
