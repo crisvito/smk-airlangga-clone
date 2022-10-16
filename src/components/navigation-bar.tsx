@@ -36,7 +36,7 @@ export function NavigationBar(this: any) {
         </div>
 
         <ul
-          className={`transtition-all absolute left-0 z-[1] mt-4 w-full rounded-3xl pb-8 pl-12 duration-500 ease-in lg:static lg:left-0 lg:z-auto lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
+          className={`transtition-all absolute left-0 z-[1] w-full rounded-3xl pb-8 pl-12 duration-500 ease-in lg:static lg:left-0 lg:z-auto lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
             open ? "left-0 bg-slate-900" : "left-[1000px]"
           }`}
         >
