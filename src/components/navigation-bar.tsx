@@ -24,8 +24,6 @@ export function NavigationBar(this: any) {
     }
   }, [theme]);
 
-  console.log(theme);
-
   const changeBg: any = () => {
     window.scrollY >= 100 ? setNavbar(true) : setNavbar(false);
   };
@@ -70,6 +68,7 @@ export function NavigationBar(this: any) {
                 key={navBarLinks.text}
                 onClick={() => setOpen(false)}
                 className="cursor-pointer"
+                offset={-150}
               >
                 <li className="hover:fs-bold mx-4 py-4 hover:text-slate-400 hover:duration-150 lg:py-0">
                   {navBarLinks.text}

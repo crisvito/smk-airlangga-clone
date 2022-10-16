@@ -7,16 +7,16 @@ export function HomeEvent() {
   ScrollToTop();
   return (
     <div id="events">
-      <h1 className="mt-20 text-center text-5xl font-black uppercase text-slate-900 dark:text-slate-200">
+      <h1 className="mt-10 text-center text-5xl font-black uppercase text-slate-900 dark:text-slate-200">
         Event
       </h1>
 
-      <div className="flex flex-wrap justify-center">
+      <div className="flex w-screen flex-wrap justify-center">
         {dataevent.map((devent) => {
           return (
             <Link
               to={`${base}event/${devent.slug}`}
-              className="group relative m-10 block h-52 w-screen overflow-hidden rounded-lg shadow-md duration-300 xl:h-96 xl:w-1/2"
+              className="group relative m-10 block h-72 w-1/2 w-screen overflow-hidden rounded-lg shadow-md duration-300 xl:h-96 xl:w-1/2"
               key={devent.slug}
             >
               <div
@@ -29,7 +29,7 @@ export function HomeEvent() {
                   className="absolute bottom-0 z-[-1] h-full w-full"
                 />
                 <div>
-                  <h5 className="mb-2 text-4xl font-bold uppercase">
+                  <h5 className="mb-2 text-xl font-bold uppercase lg:text-4xl">
                     {devent.name}
                   </h5>
                 </div>
