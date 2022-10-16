@@ -1,4 +1,5 @@
 import { CaretDown } from "phosphor-react";
+import { Link as LinkScroll } from "react-scroll";
 
 export function HomeHero() {
   return (
@@ -12,13 +13,13 @@ export function HomeHero() {
             Wellcome <br /> to <br /> Airlangga
           </h1>
         </div>
-        <a href="#events" className="absolute bottom-0 cursor-pointer ">
+        <LinkScroll to="events" className="absolute bottom-0 cursor-pointer ">
           <CaretDown
             size={62}
             weight="bold"
             className="h-min duration-300 hover:w-20"
           />
-        </a>
+        </LinkScroll>
       </div>
     </div>
   );

@@ -1,3 +1,3 @@
-export * from "./landing-page"
-export * from "./events"
+export * from "./home"
+export * from "./event"
 export * from "./error"

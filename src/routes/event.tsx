@@ -1,4 +1,4 @@
-import { EventDetail, EventHero } from "../../contents";
+import { EventDetail, EventHero } from "../contents";
 
 export function RouteEvent() {
   return (
