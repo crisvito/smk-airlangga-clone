@@ -16,7 +16,7 @@ export function HomeEvent() {
           return (
             <Link
               to={`${base}event/${devent.slug}`}
-              className="group relative m-10 block h-72 w-1/2 w-screen overflow-hidden rounded-lg shadow-md duration-300 xl:h-96 xl:w-1/2"
+              className="group relative m-10 block h-72 w-full w-screen overflow-hidden rounded-lg shadow-md duration-300 xl:h-96 xl:w-1/2"
               key={devent.slug}
             >
               <div

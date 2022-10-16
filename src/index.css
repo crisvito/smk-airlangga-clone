@@ -13,10 +13,10 @@
   }
 }
 @layer components {
-  #about .about-us .about-content {
-    @apply flex h-auto w-1/4 flex-wrap;
+  .about-content {
+    @apply flex h-auto w-full flex-wrap p-5 text-center lg:w-1/4;
   }
-  #about .about-us .about-content h3 {
+  .about-content h3 {
     @apply block py-2 font-black uppercase;
   }
 }

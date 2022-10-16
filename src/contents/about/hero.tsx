@@ -1,25 +1,25 @@
-import { Backpack, ThumbsUp, UsersThree } from "phosphor-react";
 import { Link } from "react-router-dom";
 import { dataabout } from "../../data/about";
 import { Logo } from "../../components";
 export function AboutHero() {
-  const Logos = ["Backpack", "ThumbsUp", "UsersThree"];
   return (
     <div
       id="about"
-      className=" h-screen bg-slate-400 text-slate-900 dark:bg-slate-700 dark:text-slate-200"
+      className=" h-auto bg-slate-400 text-slate-900 dark:bg-slate-700 dark:text-slate-200"
     >
       <div className="flex justify-center pt-10 pb-5">
         <h1 className="text-5xl">About Us</h1>
       </div>
 
-      <div className="about-us mt-10 flex w-screen flex-wrap justify-center gap-10">
+      <div className="mt-10 flex flex-col items-center justify-center gap-10 pb-10 lg:flex lg:w-screen">
         {dataabout.map((about) => {
           return (
             <div className="about-content" key={about.id}>
               <div className="w-full">
                 <Link to={"about/" + about.slug}>
-                  <Logo key={about.logo} logo={about.logo} />
+                  <span className="my-3 flex h-auto w-full justify-center text-center">
+                    <Logo key={about.logo} logo={about.logo} />
+                  </span>
                   <h3>{about.name}</h3>
                 </Link>
                 <p>{about.content}</p>

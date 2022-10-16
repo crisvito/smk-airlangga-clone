@@ -8,7 +8,7 @@ export function EventHero() {
   const event = getEvent(params.slug as string);
 
   return (
-    <div className="relative flex h-screen w-screen items-center justify-center">
+    <div className="min-w-screen relative flex h-screen items-center justify-center">
       <img
         src={event?.heroImgUrl + ".jpg"}
         alt={event?.name}
@@ -23,7 +23,7 @@ export function EventHero() {
             className="h-min duration-300 hover:-translate-x-6 hover:scale-x-150 hover:scale-y-125"
           />
         </Link>
-        <h1 className="font-brand-bold text-7xl uppercase leading-tight tracking-widest">
+        <h1 className="font-brand-bold text-xl uppercase leading-tight tracking-widest lg:text-7xl">
           {event?.name}
         </h1>
       </div>

@@ -1,5 +1,6 @@
 import { ArrowCircleUp } from "phosphor-react";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Footer, NavigationBar } from "../components";
 import { HomeHero, HomeEvent } from "../contents";
 import { AboutHero } from "../contents";

@@ -2,6 +2,7 @@ import { List, Moon, Sun, X } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { configNavBarLinks } from "../configs";
 import { Link as LinkScroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 export function NavigationBar(this: any) {
   const [open, setOpen] = useState(false);
