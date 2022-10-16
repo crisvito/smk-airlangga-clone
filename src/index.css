@@ -9,7 +9,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-slate-900;
+    @apply bg-slate-200 dark:bg-slate-900;
   }
 }
 @layer components {

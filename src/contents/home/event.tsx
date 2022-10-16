@@ -7,7 +7,9 @@ export function HomeEvent() {
   ScrollToTop();
   return (
     <div id="events">
-      <h1 className="mt-20 text-center text-5xl font-black uppercase">Event</h1>
+      <h1 className="mt-20 text-center text-5xl font-black uppercase text-slate-900 dark:text-slate-200">
+        Event
+      </h1>
 
       <div className="flex flex-wrap justify-center">
         {dataevent.map((devent) => {

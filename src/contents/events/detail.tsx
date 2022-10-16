@@ -7,7 +7,7 @@ export function EventDetail() {
 
   return (
     <div id="event" className="flex h-auto items-center justify-center">
-      <div className="h-full w-full flex-col items-center justify-center bg-black bg-opacity-0 bg-opacity-50">
+      <div className="h-full w-full flex-col items-center justify-center bg-opacity-0 bg-opacity-50 text-slate-900 dark:text-slate-200">
         <h1 className="font-brand-bold mt-20 mb-10 text-center text-5xl uppercase leading-tight tracking-widest">
           {event?.name}
         </h1>

@@ -1,11 +1,30 @@
-import { List, X } from "phosphor-react";
-import { useState } from "react";
+import { List, Moon, Sun, X } from "phosphor-react";
+import { useEffect, useState } from "react";
 import { configNavBarLinks } from "../configs";
 import { Link as LinkScroll } from "react-scroll";
 
 export function NavigationBar(this: any) {
   const [open, setOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
+  const [theme, setTheme] = useState(false);
+
+  useEffect(() => {
+    if (window.matchMedia("theme: dark").matches) {
+      setTheme(true);
+    } else {
+      setTheme(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  console.log(theme);
 
   const changeBg: any = () => {
     window.scrollY >= 100 ? setNavbar(true) : setNavbar(false);
@@ -14,12 +33,14 @@ export function NavigationBar(this: any) {
   return (
     <div
       className={`fixed z-10 block w-full ${
-        navbar ? "bg-slate-900" : ""
-      } z-10 duration-500`}
+        navbar
+          ? "bg-slate-200 text-slate-900 dark:bg-slate-900 dark:text-white"
+          : ""
+      } z-10 duration-300`}
     >
       <nav className="px-5 py-5 text-xl lg:flex lg:items-center lg:justify-between">
         <a href="/">
-          <h1 className="text-xl font-bold uppercase text-white lg:text-3xl">
+          <h1 className="text-xl font-bold uppercase lg:text-3xl">
             Smk Airlangga Balikpapan
             <span className="block text-base font-normal">
               Entrepreneur Spirit School
@@ -36,8 +57,10 @@ export function NavigationBar(this: any) {
         </div>
 
         <ul
-          className={`transtition-all absolute left-0 z-[1] w-full rounded-3xl pb-8 pl-12 duration-500 ease-in lg:static lg:left-0 lg:z-auto lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
-            open ? "left-0 bg-slate-900" : "left-[1000px]"
+          className={`transtition-all absolute left-0 z-[1] mt-5 w-full pb-8 pl-12 duration-500 ease-in lg:static lg:left-0 lg:z-auto lg:mt-0 lg:flex lg:w-auto lg:items-center lg:pb-0 lg:pl-0 ${
+            open
+              ? "left-0 bg-slate-200 text-slate-900 dark:bg-slate-900 dark:text-slate-300"
+              : "left-[1000px]"
           }`}
         >
           {configNavBarLinks.map((navBarLinks) => {
@@ -54,6 +77,18 @@ export function NavigationBar(this: any) {
               </LinkScroll>
             );
           })}
+          <li className="mx-4 pt-4 lg:mx-0 lg:pt-0">
+            {theme ? (
+              <Sun size={34} weight="fill" onClick={() => setTheme(false)} />
+            ) : (
+              <Moon
+                size={34}
+                weight="fill"
+                onClick={() => setTheme(true)}
+                className="text-gray-500"
+              />
+            )}
+          </li>
         </ul>
       </nav>
     </div>
