@@ -22,7 +22,7 @@ export function AboutHero() {
                   </span>
                   <h3>{about.name}</h3>
                 </Link>
-                <p>{about.content}</p>
+                <p>{about.excerpt}</p>
               </div>
             </div>
           );

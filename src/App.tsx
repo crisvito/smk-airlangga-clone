@@ -1,4 +1,4 @@
-import { ScrollToTop } from "./components";
+import { ScrollToTop, ToTop } from "./components";
 import { ErrorPage, RouteAbout, RouteHome } from "./routes";
 import { RouteEvent } from "./routes";
 import { Routes } from "react-router-dom";
@@ -16,6 +16,7 @@ export default function App() {
             <Route path="event/:slug" element={<RouteEvent />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
+          <ToTop />
         </div>
       </div>
     </>
