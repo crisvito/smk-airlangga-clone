@@ -1,6 +1,7 @@
 import { Footer, NavigationBar } from "../components";
 import { HomeHero, HomeEvent } from "../contents";
 import { AboutHero } from "../contents";
+import { SupportHero } from "../contents/support";
 
 export function RouteHome() {
   return (
@@ -9,6 +10,7 @@ export function RouteHome() {
       <HomeHero />
       <HomeEvent />
       <AboutHero />
+      <SupportHero />
       <Footer />
     </div>
   );

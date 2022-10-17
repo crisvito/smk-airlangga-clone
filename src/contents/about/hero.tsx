@@ -7,9 +7,9 @@ export function AboutHero() {
       id="about"
       className=" h-auto bg-slate-400 text-slate-900 dark:bg-slate-700 dark:text-slate-200"
     >
-      <div className="flex justify-center pt-10">
-        <h1 className="text-5xl">About Us</h1>
-      </div>
+      <h1 className="pt-7 text-center text-4xl font-black uppercase">
+        About Us
+      </h1>
 
       <div className="mt-5 flex flex-col items-center justify-center gap-10 pb-10 lg:flex lg:w-screen lg:flex-row lg:items-start">
         {dataabout.map((about) => {
