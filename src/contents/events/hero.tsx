@@ -12,7 +12,7 @@ export function EventHero() {
       <img
         src={event?.heroImgUrl + ".jpg"}
         alt={event?.name}
-        className="absolute z-[-10] h-3/5 w-screen bg-local"
+        className="absolute z-[-10] h-3/5 w-screen bg-local lg:h-screen"
       />
 
       <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-black bg-opacity-0 bg-opacity-50">
