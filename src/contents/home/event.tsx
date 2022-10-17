@@ -1,10 +1,7 @@
 import { dataevent } from "../../data";
 import { Link } from "react-router-dom";
-import { ScrollToTop } from "../../components";
 
 export function HomeEvent() {
-  const base = import.meta.env.BASE_URL;
-  ScrollToTop();
   return (
     <div id="events">
       <h1 className="mt-10 text-center text-5xl font-black uppercase text-slate-900 dark:text-slate-200">
@@ -15,7 +12,7 @@ export function HomeEvent() {
         {dataevent.map((devent) => {
           return (
             <Link
-              to={`${base}event/${devent.slug}`}
+              to={`event/${devent.slug}`}
               className="group relative m-10 block h-72 w-full w-screen overflow-hidden rounded-lg shadow-md duration-300 lg:h-96 lg:w-1/2"
               key={devent.slug}
             >

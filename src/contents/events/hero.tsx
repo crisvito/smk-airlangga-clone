@@ -1,8 +1,9 @@
-import { ArrowLeft, CaretDown } from "phosphor-react";
+import { CaretDown } from "phosphor-react";
 import { useParams } from "react-router-dom";
 import { getEvent } from "../../data";
 import { Link as LinkScroll } from "react-scroll";
 import { Link } from "react-router-dom";
+import { ButtonHref } from "../../components";
 export function EventHero() {
   const params = useParams();
   const event = getEvent(params.slug as string);
@@ -16,16 +17,12 @@ export function EventHero() {
       />
 
       <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-black bg-opacity-0 bg-opacity-50">
-        <Link to="/">
-          <ArrowLeft
-            size={72}
-            weight="bold"
-            className="h-min duration-300 hover:-translate-x-5"
-          />
-        </Link>
-        <h1 className="font-brand-bold text-3xl uppercase leading-tight tracking-widest lg:text-7xl">
-          {event?.name}
-        </h1>
+        <div className="flex w-1/2 flex-col items-center gap-5 lg:w-full">
+          <ButtonHref children="Back Home" where="/" />
+          <h1 className="font-brand-bold text-center text-3xl uppercase leading-tight tracking-widest lg:text-7xl">
+            {event?.name}
+          </h1>
+        </div>
       </div>
 
       <LinkScroll to="event" className="absolute bottom-0 cursor-pointer">
