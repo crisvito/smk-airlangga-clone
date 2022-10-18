@@ -1,6 +1,6 @@
 import { ArrowArcLeft } from "phosphor-react";
 import { Link, useParams } from "react-router-dom";
-import { getAbout } from "../data/about";
+import { getAbout } from "../data";
 
 export function RouteAbout() {
   const params = useParams();

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { dataabout } from "../../data/about";
+import { dataabout } from "../../data";
 import { Logo } from "../../components";
 export function AboutHero() {
   return (

@@ -1,4 +1,4 @@
-import { Footer, NavigationBar } from "../components";
+import { Footer, NavigationBar, SlideShow } from "../components";
 import { HomeHero, HomeEvent } from "../contents";
 import { AboutHero } from "../contents";
 import { SupportHero } from "../contents/support";
