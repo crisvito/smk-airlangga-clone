@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 import { ButtonScroll } from ".";
 import { dataslider } from "../data";
 
@@ -8,7 +8,7 @@ export function SlideShow() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((s) => s + 1);
-    }, 2500);
+    }, 4000);
     return () => {
       clearInterval(timer);
     };
@@ -24,7 +24,7 @@ export function SlideShow() {
         return (
           <div key={slide.id}>
             {slide.id === currentSlide && (
-              <div className="h-screen w-screen ">
+              <div id="hero-section" className="h-screen w-screen">
                 <img
                   src={slide.image + ".jpg"}
                   alt={slide.desc}
