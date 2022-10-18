@@ -23,7 +23,7 @@ export function SupportHero() {
           <Envelope size={38} weight="fill" />
         </div>
         <p>or</p>
-        <form action="" className="flex flex-col gap-3">
+        <form action="" className="flex flex-col gap-3 lg:w-2/6">
           <input
             type="email"
             name="email"
@@ -42,7 +42,7 @@ export function SupportHero() {
             placeholder="Message..."
             className="h-32 rounded border border-2 border-slate-900 dark:border-red-400"
           ></textarea>
-          <button className="w-1/2 self-center rounded-md bg-slate-900 py-1 px-3 text-slate-200 hover:bg-slate-700 dark:bg-slate-200 dark:text-slate-900 dark:hover:bg-slate-400">
+          <button className="w:1/2 self-center rounded-md bg-slate-900 py-1 px-3 text-slate-200 hover:bg-slate-700 dark:bg-slate-200 dark:text-slate-900 dark:hover:bg-slate-400 lg:w-1/4 lg:self-end">
             Submit
           </button>
         </form>
