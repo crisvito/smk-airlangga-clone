@@ -8,7 +8,7 @@ export function SlideShow() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((s) => s + 1);
-    }, 4000);
+    }, 5000);
     return () => {
       clearInterval(timer);
     };
@@ -19,18 +19,21 @@ export function SlideShow() {
   }
 
   return (
-    <div>
-      {dataslider.map((slide) => {
+    <div className="slider">
+      {dataslider.map((slide, index) => {
         return (
-          <div key={slide.id}>
-            {slide.id === currentSlide && (
-              <div id="hero-section" className="h-screen w-screen">
+          <div
+            key={index}
+            className={`${index === currentSlide ? "slide current" : "slide"}`}
+          >
+            {index === currentSlide && (
+              <div className="h-screen w-screen">
                 <img
                   src={slide.image + ".jpg"}
                   alt={slide.desc}
-                  className="absolute z-[-100] h-screen w-screen "
+                  className="absolute z-[-100] h-screen w-screen bg-black bg-opacity-0 bg-opacity-50"
                 />
-                <div className="flex h-full w-full items-center justify-center  bg-black bg-opacity-0 bg-opacity-50">
+                <div className="content flex h-full w-full items-center justify-center bg-black bg-opacity-0 bg-opacity-50">
                   <div className="flex flex-col items-center text-center">
                     <h1 className="font-brand-bold text-3xl uppercase leading-tight tracking-widest lg:text-6xl">
                       {slide.desc.split(" ").map((paragraph: string) => {

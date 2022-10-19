@@ -19,6 +19,13 @@
   .about-content h3 {
     @apply block py-2 font-black uppercase;
   }
+  .slide {
+    opacity: 0.8;
+    transition: all 1s ease-out;
+  }
+  .current {
+    opacity: 1;
+  }
 }
 
 @layer utilities {
