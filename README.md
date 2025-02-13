@@ -1,4 +1,4 @@
-# frigg-web
+# SMK Airlangga - web
 
 Make simple web with react + vite. still learn more about FrontEnd Dev
 
